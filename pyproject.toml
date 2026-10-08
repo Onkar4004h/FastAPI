@@ -7,7 +7,9 @@ authors = [
     { name = "Onkar4004h", email = "onkarraut633@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastapi>=0.143.0",
+]
 
 [project.scripts]
 fast-api = "fast_api:main"
