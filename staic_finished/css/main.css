@@ -1,3 +1,52 @@
+/* ==========================================================
+   CSS Variables (Light Mode defaults)
+   ========================================================== */
+:root {
+  --font-heading: "Montserrat", sans-serif;
+
+  --color-steel: #527c9f;
+  --color-nav-link: #e8eef3;
+  --color-nav-link-hover: #ffffff;
+  --color-link-hover: #3f6179;
+
+  --color-bg-body: #ffffff;
+  --color-bg-content: #ffffff;
+  --color-text-primary: #212529;
+  --color-text-heading: #1a1a1a;
+  --color-border: #dee2e6;
+  --color-border-light: #e9ecef;
+
+  --article-img-size: 64px;
+  --account-img-size: 125px;
+}
+
+/* ==========================================================
+   Dark Mode Variables
+   ========================================================== */
+[data-bs-theme="dark"] {
+  --color-link-hover: #8aadc8;
+
+  --color-bg-body: #1a1a1a;
+  --color-bg-content: #2d2d2d;
+  --color-text-primary: #e0e0e0;
+  --color-text-heading: #f0f0f0;
+  --color-border: #404040;
+  --color-border-light: #4a4a4a;
+}
+
+/* ==========================================================
+   Base
+   ========================================================== */
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+/* Push content below the fixed-top navbar */
+main {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
 h2,
 h3,
 h4,
@@ -21,7 +70,9 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Headers and Navigation */
+/* ==========================================================
+   Headers and Navigation
+   ========================================================== */
 .bg-steel {
   background-color: var(--color-steel);
 }
@@ -40,7 +91,9 @@ button:focus-visible {
   font-weight: 600;
 }
 
-/* Content Sections */
+/* ==========================================================
+   Content Sections
+   ========================================================== */
 .content-section {
   background: var(--color-bg-content);
   border: 1px solid var(--color-border);
@@ -55,7 +108,9 @@ button:focus-visible {
   border-color: var(--color-border-light);
 }
 
-/* Articles */
+/* ==========================================================
+   Articles
+   ========================================================== */
 .article-title {
   color: var(--color-text-heading);
   transition: color 0.2s ease-in-out;
@@ -102,7 +157,9 @@ a.article-title:focus {
   vertical-align: middle;
 }
 
-/* Account/Profile */
+/* ==========================================================
+   Account / Profile
+   ========================================================== */
 .account-img {
   height: var(--account-img-size);
   width: var(--account-img-size);
@@ -117,7 +174,9 @@ a.article-title:focus {
   max-width: 300px;
 }
 
-/* Custom Button Colors - Light Mode */
+/* ==========================================================
+   Custom Button Colors - Light Mode
+   ========================================================== */
 .btn-outline-primary {
   --bs-btn-color: #527c9f;
   --bs-btn-border-color: #527c9f;
@@ -175,7 +234,9 @@ a.article-title:focus {
   --bs-btn-active-border-color: #7c4242;
 }
 
-/* Custom Button Colors - Dark Mode */
+/* ==========================================================
+   Custom Button Colors - Dark Mode
+   ========================================================== */
 [data-bs-theme="dark"] .btn-outline-primary {
   --bs-btn-color: #8aadc8;
   --bs-btn-border-color: #8aadc8;
@@ -209,29 +270,9 @@ a.article-title:focus {
   --bs-btn-active-border-color: #e8bcbc;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .account-heading {
-    font-size: 2rem;
-  }
-
-  .article-img {
-    height: 3rem;
-    width: 3rem;
-  }
-}
-
-/* Dark Mode Features */
-
-[data-bs-theme="dark"] {
-  --color-bg-body: #1a1a1a;
-  --color-bg-content: #2d2d2d;
-  --color-text-primary: #e0e0e0;
-  --color-text-heading: #f0f0f0;
-  --color-border: #404040;
-  --color-border-light: #4a4a4a;
-}
-
+/* ==========================================================
+   Dark Mode Features
+   ========================================================== */
 [data-bs-theme="dark"] .content-section {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -240,7 +281,9 @@ a.article-title:focus {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Custom Modal Colors */
+/* ==========================================================
+   Custom Modal Colors
+   ========================================================== */
 .modal-header.bg-success {
   background-color: #4a7c5d !important;
 }
@@ -253,4 +296,18 @@ a.article-title:focus {
 .modal-header.bg-success .modal-title,
 .modal-header.bg-danger .modal-title {
   color: #ffffff !important;
+}
+
+/* ==========================================================
+   Responsive Adjustments
+   ========================================================== */
+@media (max-width: 768px) {
+  .account-heading {
+    font-size: 2rem;
+  }
+
+  .article-img {
+    height: 3rem;
+    width: 3rem;
+  }
 }

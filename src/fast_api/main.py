@@ -1,7 +1,9 @@
 from fastapi import FastAPI,Request
+from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
+# from pydantic import BaseModel
 app=FastAPI()
+app.mount("/static",StaticFiles(directory="C:/fastAPI/fast_api/staic_finished"),name="static")
 posts: list[dict] = [
     {
         "id": 2,
